@@ -29,7 +29,7 @@ RobotModel::RobotModel(const std::string& urdf) {
   last_link_frame_index_ = pinocchio_model_.getFrameId(kLastLinkName);
   last_joint_index_ =  // NOLINT(cppcoreguidelines-prefer-member-initializer)
       pinocchio_model_.frames[last_link_frame_index_]
-          .parentJoint;  // NOLINT(cppcoreguidelines-prefer-member-initializer)
+          .parent;  // NOLINT(cppcoreguidelines-prefer-member-initializer)
 
   initial_last_link_inertia_ = pinocchio_model_.inertias[last_joint_index_];
 
