@@ -52,7 +52,7 @@ pinocchio::FrameIndex RobotModel::addFrame(const std::string& name,
 
   // Add the new frame to the Pinocchio model
   pinocchio::FrameIndex new_frame_index = pinocchio_model_.addFrame(pinocchio::Frame(
-      name, parent_frame.parentJoint, parent_frame_id, placement, pinocchio::OP_FRAME));
+      name, parent_frame.parent, parent_frame_id, placement, pinocchio::OP_FRAME));
 
   return new_frame_index;
 }
